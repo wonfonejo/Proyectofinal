@@ -16,15 +16,46 @@ Descargar todos los archivos necesarios del programa:
 -linfunciones.dll
 
 * Paso 2: 
-Asegurarse de tener las herramientas básicas necesarias de cada lenguaje, en este caso, el CFFI. Para Windows puede ser útil usar “pip install cffi”.  
-En el caso de Linux, primero instala los paquetes necesarios para compilar extensiones en C, puede ser útil “sudo apt install build-essential python3-dev” luego instala cffi con “pip install cffi” o “pip3 install cffi”.
+Asegurarse de tener las herramientas básicas necesarias de cada lenguaje, en este caso, el CFFI. Para Windows puede ser útil usar:
+
+```bash
+pip install cffi
+```
+
+En el caso de Linux, primero instala los paquetes necesarios para compilar extensiones en C, puede ser útil:
+
+```bash
+sudo apt install build-essential python3-dev
+```
+
+luego instala cffi con:
+
+```bash
+pip install cffi
+o
+pip3 install cffi
+```
 
 * Paso 3:
-Instalar la LLM, para esto si estás en Windows busca en tu navegador https://ollama.com/ luego puedes verificar que esté instalado con “ollama --version” y por último descarga y corre llama2 con “ollama run llama2”.
-Para Linux sigue los mismos pasos, puedes cambiar el primer paso y hacerlo directamente desde la terminal usando “curl -fsSL https://ollama.com/install.sh | sh”
+Instalar la LLM, para esto si estás en Windows busca en tu navegador https://ollama.com/ luego puedes verificar que esté instalado con:
 
+```bash
+ollama --version
+```
 
-* Paso 4 Caso Window (preparando el entorno): 
+y por último descarga y corre llama2 con:
+
+```bash
+ollama run llama2
+```
+
+Para Linux sigue los mismos pasos, puedes cambiar el primer paso y hacerlo directamente desde la terminal usando:
+
+```bash
+curl -fsSL https://ollama.com/install.sh | sh
+```
+
+* Paso 4 Caso Windows (preparando el entorno): 
 
 Una vez descargado Ollama, se procede a instalar GCC para compilar el código en C. En este caso se utiliza la distribución de MSYS2.
 
