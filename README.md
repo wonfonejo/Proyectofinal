@@ -1,8 +1,3 @@
-# Proyectofinal
-# Descripción
-
-Este proyecto consiste en un juego de ajedrez realizado en C, que se integró a un modelo de lenguaje (LLM), todo esto utilizando a Python como un puente entre la LLM y nuestro código, ya Python es capaz de interactuar con la LLM y mediante CFFI es capaz de interactuar con el código en C, todo esto usando una MCP que funciona como organizador de todas estas partes. 
-
 # Requisitos. 
 Los elementos necesarios para poder utilizar este proyecto son: 
 -C: Código base donde se encuentra toda la lógica del juego. 
@@ -28,6 +23,26 @@ En el caso de Linux, primero instala los paquetes necesarios para compilar exten
 Instalar la LLM, para esto si estás en Windows busca en tu navegador https://ollama.com/ luego puedes verificar que esté instalado con “ollama --version” y por último descarga y corre llama2 con “ollama run llama2”.
 Para Linux sigue los mismos pasos, puedes cambiar el primer paso y hacerlo directamente desde la terminal usando “curl -fsSL https://ollama.com/install.sh | sh”
 
-* Paso 4: 
 
-Proyecto Final-Plataformas.
+* Paso 4 Caso Window (preparando el entorno): 
+
+Una vez descargado Ollama, se procede a instalar GCC para compilar el código en C. En este caso se utiliza la distribución de MSYS2.
+
+Dentro de la terminal de MSYS2, se deben ejecutar los siguientes comandos:
+
+```bash
+pacman -S gcc
+pacman -S python
+pacman -S make
+```
+
+se recomienda comprobar si se tiene el comando pip, para realizar el paso 2 nuevamente.
+
+
+* Paso 5:
+Una vez teniendo todas las herramientas instaladas, utiliza los siguientes comandos en la terminal (MSYS2 o Linux):
+
+```bash
+make all
+make run
+```
