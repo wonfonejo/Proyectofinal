@@ -4,7 +4,7 @@
 all:
 	gcc -o libfunciones.dll funciones.c -shared -pipe
 
-run: all
+run: 
 	python juego.py
 
 clean:
